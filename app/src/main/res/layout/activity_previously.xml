@@ -2,53 +2,44 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize">
+    tools:context=".previously">
 
-    <!-- Welcome message -->
+    <!-- Previously, you ate.. -->
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/previously_"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="76dp"
         android:gravity="center_horizontal|center_vertical"
-        android:text="Hailey, What do you feel \n like eating today?"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/previously"
+        android:textAppearance="@style/previously"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- card-->
+    <!-- items -->
     <ImageView
-        android:id="@+id/card"
-        android:layout_width="360dp"
-        android:layout_height="312dp"
-        android:layout_marginTop="80dp"
-        android:background="#00000000"
-        android:elevation="-10dp"
-        android:src="@drawable/home_welcome"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Button -->
-    <TextView
-        android:id="@+id/chooseforme"
+        android:id="@+id/previously01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/oval"
-        android:elevation="30dp"
-        android:gravity="center"
-        android:text="Choose for me"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/menu_button"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginTop="120dp"
+        android:src="@drawable/previously01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/previously02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/previously02"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/previously01" />
 
     <!-- Menu button -->
     <ImageView

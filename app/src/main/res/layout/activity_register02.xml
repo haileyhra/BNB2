@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Hi, what is your name? -->
+    <TextView
+        android:id="@+id/hi_what_is_"
+        android:layout_width="262dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="64dp"
+        android:gravity="top"
+        android:text="Tell us a bit more about you"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- GENDER -->
+    <TextView
+        android:id="@+id/first_name"
+        android:layout_width="86dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="184dp"
+        android:gravity="top"
+        android:text="GENDER"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/female"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/gender_button"
+        android:src="@drawable/female"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/first_name" />
+
+    <ImageButton
+        android:id="@+id/male"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/gender_button"
+        android:src="@drawable/male"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/first_name" />
+
+    <ImageButton
+        android:id="@+id/others"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginLeft="184dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/gender_button"
+        android:src="@drawable/other"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/first_name" />
+
+    <!-- GENDER OPTION -->
+    <TextView
+        android:id="@+id/text_female"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top"
+        android:text="Female"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/female"
+        app:layout_constraintStart_toStartOf="@+id/female"
+        app:layout_constraintTop_toBottomOf="@+id/female" />
+
+    <TextView
+        android:id="@+id/text_male"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top"
+        android:text="Male"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/male"
+        app:layout_constraintStart_toStartOf="@+id/male"
+        app:layout_constraintTop_toBottomOf="@+id/male" />
+
+    <TextView
+        android:id="@+id/text_other"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top"
+        android:text="Other"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/others"
+        app:layout_constraintStart_toStartOf="@+id/others"
+        app:layout_constraintTop_toBottomOf="@+id/others" />
+
+    <!-- BIRTHDAY -->
+    <TextView
+        android:id="@+id/title_birthday"
+        android:layout_width="82dp"
+        android:layout_height="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="342dp"
+        android:gravity="top"
+        android:text="BIRTHDAY"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/date"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:hint="Date"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_birthday" />
+
+    <Spinner
+        android:id="@+id/month"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="Date"
+        app:layout_constraintStart_toEndOf="@+id/date"
+        app:layout_constraintTop_toBottomOf="@+id/title_birthday" />
+
+    <Spinner
+        android:id="@+id/year"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="Date"
+        app:layout_constraintStart_toEndOf="@+id/month"
+        app:layout_constraintTop_toBottomOf="@+id/title_birthday" />
+
+    <!-- Button -->
+    <TextView
+        android:id="@+id/con"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
+        android:background="@drawable/oval"
+        android:gravity="center"
+        android:text="Continue"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Arrow -->
+    <ImageView
+        android:id="@+id/back_to_log_arrowarrow"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Back-->
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center_vertical"
+        android:text="Back"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
