@@ -23,7 +23,8 @@ public class home02 extends AppCompatActivity {
     Integer[] images = {
             R.drawable.random01,
             R.drawable.random02,
-            R.drawable.random03
+            R.drawable.random03,
+            R.drawable.random04
     };
 
     int pickedImage = 0, lastPicked = 0;
