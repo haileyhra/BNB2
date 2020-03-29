@@ -24,7 +24,6 @@ public class home02 extends AppCompatActivity {
             R.drawable.random01,
             R.drawable.random02,
             R.drawable.random03,
-            R.drawable.random04
     };
 
     int pickedImage = 0, lastPicked = 0;
@@ -69,10 +68,12 @@ public class home02 extends AppCompatActivity {
                             startActivity(profileIntent);
                             break;
                         case R.id.menu2:
-                            Toast.makeText(getApplication(),"메뉴2",Toast.LENGTH_SHORT).show();
+                            Intent preferenceIntent = new Intent(home02.this,preference.class);
+                            startActivity(preferenceIntent);
                             break;
                         case R.id.menu3:
-                            Toast.makeText(getApplication(),"메뉴2",Toast.LENGTH_SHORT).show();
+                            Intent settingIntent = new Intent(home02.this,setting.class);
+                            startActivity(settingIntent);
                         default:
                             break;
                     }
