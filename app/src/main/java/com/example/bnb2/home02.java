@@ -1,69 +1,85 @@
 package com.example.bnb2;
-
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.Menu;
-import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.PopupMenu;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
-
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-g
+
+import java.util.Random;
+
 
 public class home02 extends AppCompatActivity {
+    ImageView card;
+    TextView chooseforme;
+    Random r;
 
-    private AppBarConfiguration mAppBarConfiguration;
+    Integer[] images = {
+            R.drawable.random01,
+            R.drawable.random02,
+            R.drawable.random03
+    };
 
+    int pickedImage = 0, lastPicked = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home02);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+
+        card = (ImageView)findViewById(R.id.card);
+        chooseforme = (TextView)findViewById(R.id.chooseforme);
+
+        r = new Random();
+
+        chooseforme.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
-                .setDrawerLayout(drawer)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
-    }
+            public void onClick(View v) {
+                //Remove duplicates
+                do {
+                    pickedImage = r.nextInt(images.length);
+                } while (pickedImage == lastPicked);
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home02, menu);
-        return true;
-    }
+                lastPicked = pickedImage;
+                //Display image
+                card.setImageResource(images[pickedImage]);
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();
-    }
-}
+            }});
+
+//예쁜 메뉴 스타일
+    ImageView menu_button = (ImageView) findViewById(R.id.menu_button);
+        menu_button.setOnClickListener(new View.OnClickListener() {
+        public void onClick(View view) {
+            PopupMenu popup= new PopupMenu(getApplicationContext(), view);//v는 클릭된 뷰를 의미
+
+            getMenuInflater().inflate(R.menu.main_menu, popup.getMenu());
+            popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    switch (item.getItemId()){
+                        case R.id.menu1:
+                            Intent profileIntent = new Intent(home02.this,profile.class);
+                            startActivity(profileIntent);
+                            break;
+                        case R.id.menu2:
+                            Toast.makeText(getApplication(),"메뉴2",Toast.LENGTH_SHORT).show();
+                            break;
+                        case R.id.menu3:
+                            Toast.makeText(getApplication(),"메뉴2",Toast.LENGTH_SHORT).show();
+                        default:
+                            break;
+                    }
+                    return false;
+                }
+            });
+
+            popup.show();//Popup Menu 보이기
+        }
+    });
+}}

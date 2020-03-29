@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "116486235093",
+    "firebase_url": "https://nimble-ratio-271114.firebaseio.com",
+    "project_id": "nimble-ratio-271114",
+    "storage_bucket": "nimble-ratio-271114.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116486235093:android:02b147c76e3cce8711535c",
+        "android_client_info": {
+          "package_name": "com.example.bnb2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116486235093-jjjav4407jum3fffpr3rgfdqq6pe370g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bnb2",
+            "certificate_hash": "c9eec1f53b2e0508350fff854b59b66a4776aa47"
+          }
+        },
+        {
+          "client_id": "116486235093-tm5blaf83lkvi2bvvrva777qpu8bmun9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMukwFwYlzrsCNl9xQxBaQrwLQoRyYuQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116486235093-tm5blaf83lkvi2bvvrva777qpu8bmun9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,20 +1,35 @@
 <resources>
-    <string name="app_name">BNB2</string>
-    <string name="title_activity_home02">home02</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name">Bread and butter</string>
+    <string name="title_activity_home02">B&amp;B</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_mypreference">My preference</string>
+    <string name="menu_setting">Settings</string>
+    <string name="menu_previously">Previously</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
+    <string name="title_home">Settings</string>
+    <string name="title_dashboard">Settings</string>
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-
     <string name="home_second">Home Second</string>
+    <string name="previously">Previously, you ate..</string>
 
+    <!-- Home Title -->
+    <string name="home_title">
+    Hailey, what do you \n feel like eating today?
+    </string>
+
+    <!-- birthday option -->
+    <string-array name="birthday">
+        <item>1번</item>
+        <item>2번</item>
+        <item>3번</item>
+        <item>4번</item>
+        <item>5번</item>
+    </string-array>
 </resources>

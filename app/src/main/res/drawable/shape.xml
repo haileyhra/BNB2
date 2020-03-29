@@ -1,36 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <shape xmlns:android="http://schemas.android.com/apk/res/android"
-        android:shape="oval">
-        <solid
-            android:color="#FFFF00"/>
-        <stroke
-            android:width="220dp"
-            android:color="#192381"
-            android:dashWidth="4dp"
-            android:dashGap="2dp" />
-        <padding
-            android:left="7dp"
-            android:top="7dp"
-            android:right="7dp"
-            android:bottom="7dp" />
-        <corners android:radius="220dp" />
-        <gradient
-            android:startColor="#FFFF0000"
-            android:endColor="#80FF00FF"
-            android:angle="270"/>
-    </shape>
-
-/*그림자*/
-    <item android:top="3dp">
-        <shape>
-            <corners android:radius="3dp" />
-            <solid android:color="#1f000000" />
-        </shape>
-    </item>
-
-
-    출처: https://ghj1001020.tistory.com/1 [혁준 블로그]
 
 </selector>

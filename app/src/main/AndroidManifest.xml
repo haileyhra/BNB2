@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.bnb2">
 
+    <!-- 인터넷 권한 선언 -->
+    <uses-permission android:name="android.permission.INTERNET'"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,10 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".register04"/>
+        <activity android:name=".register03" />
+        <activity android:name=".register02" />
+        <activity android:name=".register" />
+        <activity android:name=".setting" />
+        <activity android:name=".preference" />
+        <activity android:name=".editprofile" />
+        <activity android:name=".profile" />
+        <activity android:name=".previously" />
         <activity
             android:name=".home02"
-            android:label="@string/title_activity_home02"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="@string/title_activity_home02" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
