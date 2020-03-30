@@ -7,14 +7,14 @@
     tools:context=".profile">
 
     <!-- Profile pic -->
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_pic"
         android:layout_width="128dp"
         android:layout_height="128dp"
         android:layout_alignParentTop="true"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/frog"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,15 +25,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="184dp"
-        android:layout_marginLeft="184dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
         android:gravity="center_vertical"
-        android:textSize="20sp"
+        android:text="Hailey Ra"
         android:textColor="#000000"
-        android:text="Name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_pic"
+        app:layout_constraintStart_toEndOf="@+id/profile_pic"
+        app:layout_constraintTop_toTopOf="@+id/profile_pic" />
 
     <!-- Detail Items -->
     <TextView
@@ -146,8 +146,9 @@
     <!-- Button -->
     <TextView
         android:id="@+id/btn_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="312dp"
+        android:layout_height="64dp"
+        android:textAlignment="textStart"
         android:layout_marginBottom="20dp"
         android:background="@drawable/oval"
         android:gravity="center"

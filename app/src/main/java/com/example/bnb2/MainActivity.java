@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.se.omapi.SEService;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     Button signin;
     TextView signup;
+    EditText etID;
+    EditText etpw;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,4 +129,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
-    }}
+    }
+
+
+
+
+
+
+
+}
