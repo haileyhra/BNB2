@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
 
-    <!-- Bread & -->
+    <!-- Title -->
     <TextView
         android:id="@+id/bread"
         android:layout_width="154dp"
@@ -19,26 +19,12 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="24dp"
         android:gravity="center_vertical"
-        android:text= "Bread &amp;"
-        android:textAppearance="@style/title"
+        android:text= "Bread &amp; n\Butter"
+        android:textAppearance="@style/heading01"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Butter -->
-    <TextView
-        android:id="@+id/butter"
-        android:layout_width="wrap_content"
-        android:layout_height="41dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center_vertical"
-        android:text="Butter"
-        android:textAppearance="@style/butter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bread" />
 
     <!-- Logo -->
     <ImageView
@@ -56,13 +42,13 @@
     <TextView
         android:id="@+id/email_addre"
         android:layout_width="116dp"
-        android:layout_height="16dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="177dp"
         android:gravity="top"
         android:text="Email address"
-        android:textAppearance="@style/email_addre"
+        android:textAppearance="@style/body01"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -74,6 +60,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="8dp"
         android:hint="Please enter your email address."
+        android:inputType="text"
         android:textColor="#1B2631"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_addre" />
@@ -81,24 +68,25 @@
     <TextView
         android:id="@+id/password"
         android:layout_width="116dp"
-        android:layout_height="16dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="273dp"
         android:gravity="top"
         android:text="Password"
-        android:textAppearance="@style/email_addre"
+        android:textAppearance="@style/body01"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etID2"
+        android:id="@+id/etpw"
         android:layout_width="312dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="8dp"
         android:textColor="#1B2631"
+        android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
@@ -111,7 +99,7 @@
         android:text="Forgot password? Click here to reset."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etID2" />
+        app:layout_constraintTop_toBottomOf="@+id/etpw" />
 
     <Button
         android:id="@+id/signin"
