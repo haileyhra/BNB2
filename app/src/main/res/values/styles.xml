@@ -7,23 +7,20 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <!-- styles.xml -->
-    <style name="title">
+    <!-- Texts -->
+    <style name="h1">
         <item name="android:textSize">40sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#000000</item>
     </style>
 
-    <style name="butter">
-        <item name="android:textSize">36sp</item>
+    <style name="h2">
+        <item name="android:textSize">40sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#000000</item>
     </style>
 
-    <style name="email_addre">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColor">#000000</item>
-    </style>
+
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
